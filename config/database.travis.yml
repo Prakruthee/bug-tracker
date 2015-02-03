@@ -1,0 +1,5 @@
+test:
+  adapter: postgresql
+  database: bug_tracker_test
+  username: postgres
+  password: 
