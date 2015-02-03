@@ -1,0 +1,24 @@
+language: ruby
+cache: bundler
+bundler_args: --without development debug --path=~/.bundle
+rvm:
+- 2.0.0
+gemfile:
+- Gemfile
+env:
+  global:
+  - RAILS_ENV="test"
+  matrix:
+  - RAILSENV=test RAKETEST=spec
+script:
+- RAILS_ENV=$RAILSENV bundle exec rake $RAKETEST
+before_install:
+- "echo 'gem: --no-ri --no-rdoc' > ~/.gemrc"
+before_script:
+- "cp config/database.travis.yml config/database.yml"
+- "cp config/security.example.yml config/security.yml"
+- "psql -c 'create database bug_tracker_test' -U postgres"
+- "RAILS_ENV=$RAILSENV bundle exec rake db:migrate"
+- "rm -fR public/assets/*"
+- "bundle exec rake assets:precompile || true"
+- "bundle exec rake assets:precompile || true"
