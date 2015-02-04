@@ -1,0 +1,20 @@
+
+html, body.landing-page-bg {
+    background-color: #333333;
+    height: 100%;
+}
+body {
+    color: #333333;
+    height: 100%;
+}
+.navbar {
+    border-radius: 0px;
+}
+.navbar-brand {
+     font-size: 28px;font-weight: 600;
+}
+.modal-dialog {
+    margin: 80px auto;
+    width: 500px;
+}
+
