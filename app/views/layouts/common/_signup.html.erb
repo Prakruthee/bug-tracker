@@ -4,43 +4,52 @@
       <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
       <h4 class="modal-title">Sign Up</h4>
     </div>
+
     <%= form_for :user, url: users_path, method: "post", html: {:class =>"form-horizontal"} do |f| %>
     <div class="modal-body">
+
       <div class="form-group">
         <label for="Name" class="col-sm-3 control-label">Name</label>
         <div class="col-sm-7">
-         <%= f.text_field :name, :class =>"form-control",:id =>"Name", :placeholder => "Name" %>
+         <%= f.text_field :name, :class =>"form-control js-user-name",:id =>"user_name", :placeholder => "Name" %>
        </div>
-       <div class="col-sm-2"></div>
+       <!-- <div class="col-sm-2"></div> -->
+       <div class="col-sm-2" id="error_msg"></div>
+
      </div>
-     <div class="form-group">
+
+     <!-- <div class="form-group">
       <label for="inputEmail" class="col-sm-3 control-label">Email id</label>
       <div class="col-sm-7">
-        <%= f.text_field :email, :class =>"form-control",:id =>"inputEmail",:placeholder =>"Email" %>
+        <%= f.text_field :email, :class =>"form-control js-email",:id =>"inputEmail",:placeholder =>"Email" %>
       </div>
       <div class="col-sm-2"></div>
     </div>
+ -->
     <div class="form-group">
       <label for="inputPassword" class="col-sm-3 control-label">Password</label>
       <div class="col-sm-7">
-        <%= f.password_field :password, :class =>"form-control",:id =>"inputPassword",:placeholder => "Password" %>
+        <%= f.password_field :password, :class =>"form-control js-password",:id =>"inputPassword",:placeholder => "Password" %>
       </div>
-      <div class="col-sm-2"></div>
+      <div class="col-sm-2" id="error_msg3"></div>
     </div>
+
     <div class="form-group">
       <label for="inputPassword" class="col-sm-3 control-label">Confirm</label>
       <div class="col-sm-7">
-        <%= f.password_field :password_confirmation, :class =>"form-control",:id =>"inputPassword",:placeholder => "Password confirmation" %>
+        <%= f.password_field :password_confirmation, :class =>"form-control js-confirm-password",:id =>"confrimPassword",:placeholder => "Password confirmation" %>
       </div>
-      <div class="col-sm-2"></div>
+      <div class="col-sm-2" id="error_msg4"></div>
     </div>
 
   </div>
+
   <div class="modal-footer">
   <%= f.submit "OK", :class =>"btn btn-primary ok-btn-padding" %>
     <!--  <button type="button" class="btn btn-primary ok-btn-padding">OK</button> -->
     <button type="button" class="btn btn-default ok-btn-padding" data-dismiss="modal">Cancel</button>
   </div>
+
   <% end %>
 </div>
 </div>
