@@ -40,7 +40,7 @@ gem 'bcrypt', '~> 3.1.7'
 
 group :development, :test do
   gem 'rspec-rails', '~> 3.0'
-  gem 'factory_girl', '~> 4.5.0'
+  gem 'factory_girl_rails'
   gem 'shoulda', '~> 3.5.0'
   gem "awesome_print"
   gem 'pry'
