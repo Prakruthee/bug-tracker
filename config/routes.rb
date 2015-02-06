@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
-resources :users
-root 'welcome#index'
+  get "users/check_email"=>"users#check_email"
+  root 'welcome#index'
+  resources :users
 end

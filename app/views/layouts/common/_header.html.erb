@@ -1,4 +1,5 @@
-<nav class="navbar navbar-inverse ">
+ <!--    Header-->
+ <nav class="navbar navbar-inverse ">
   <div class="container">
     <div class="navbar-header">
       <button aria-controls="navbar" aria-expanded="false" data-target="#navbar" data-toggle="collapse" class="navbar-toggle collapsed" type="button">
@@ -7,25 +8,29 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a href="#" class="navbar-brand">Event Handler</a>
+      <a href="#" class="navbar-brand">Interactive-Forum</a>
     </div>
     <div class="navbar-collapse collapse">
       <ul class="nav navbar-nav navbar-right">
         <li>
+          <!-- Sign up Button trigger modal -->
+          <%#= link_to 'Sign up', new_user_path, :class => "btn btn-success signup-login-btn", 'data-toggle' => 'modal', 'data-target'=>'#myModal', remote: true %>
           <%= button_to "Sign up", new_user_path ,:method=> :get, remote: true, :class=>"btn btn-success signup-login-btn", 'data-toggle' => 'modal', 'data-target'=>'#myModal'%>
         </li>
         <li>
-        <!-- Log in Button trigger modal -->
-          <button type="button" class="btn btn-success signup-login-btn" data-toggle="modal" data-target="#logIn">Log in</button>
-          <%= render :partial=>"layouts/common/login"%>
+          <!-- Log in Button trigger modal -->
+          <button type="button" class="btn btn-success signup-login-btn" data-toggle="modal" data-target="#logIn">
+            Log in
+          </button>
         </li>
       </ul>
     </div><!--/.navbar-collapse -->
   </div>
 </nav>
-  <div class="container landing-content-area">
-    <h1 class="landing-heding">BUG TRACKER </h1>
-    <h5> PROJECT BY PRAKRUTHI </h5>
-  </div>
 
 
+<!--Content Area-->
+<div class="container landing-content-area">
+  <h1 class="landing-heding">Interactive-Forum</h1>
+  <h5> PROJECT BY SHARMILA</h5>
+</div>

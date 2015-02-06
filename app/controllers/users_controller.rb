@@ -8,30 +8,37 @@ class UsersController < ApplicationController
     end
   end
 
-	def create
-		@user= User.new(user_params)
+  def check_email
+   @user = User.find_by_email(params[:user][:email])
+   respond_to do |format|
+     format.json { render :json => !@user }
+   end
+ end
 
-		if @user.save
-			redirect_to users_path, :notice => "Signed up!"
-		else
-			respond_to do |format|
-				format.html { render action: "new" }
-			end
-		end
-	end
+ def create
+  @user= User.new(user_params)
+
+  if @user.save
+   redirect_to users_path, :notice => "Signed up!"
+ else
+   respond_to do |format|
+    format.html { render action: "new" }
+  end
+end
+end
 
 
-	def index
-		respond_to do |format|
+def index
+  respond_to do |format|
       format.html # index.html.erb
 
       format.js {}
     end
   end
 
-private
+  private
 
-def user_params
+  def user_params
     params.require(:user).permit(:name, :email, :password, :password_confirmation)
   end
 end
