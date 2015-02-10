@@ -5,7 +5,7 @@ html, body.landing-page-bg {
 }
 body {
     color: #333333;
-    height: 100%;
+    min-height: 100%;
 }
 .navbar {
     border-radius: 0px;

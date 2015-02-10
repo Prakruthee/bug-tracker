@@ -1,5 +1,4 @@
- <!--    Header-->
- <nav class="navbar navbar-inverse ">
+<nav class="navbar navbar-inverse ">
   <div class="container">
     <div class="navbar-header">
       <button aria-controls="navbar" aria-expanded="false" data-target="#navbar" data-toggle="collapse" class="navbar-toggle collapsed" type="button">
@@ -8,29 +7,41 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a href="#" class="navbar-brand">Interactive-Forum</a>
+      <%= link_to "Bug-Tracker",root_path,:class =>"navbar-brand" %>
     </div>
     <div class="navbar-collapse collapse">
+
       <ul class="nav navbar-nav navbar-right">
+      <%if current_user.present?%>
+      <li>
+          <img src="/assets/Profile-Pic.jpg" alt="Profile picture" class="img-rounded profile-pic">
+          <span class="profile-name"><%=current_user.name%></span>
+        </li>
+         <li>
+          <!-- Sign up Button trigger modal -->
+
+         <%= button_to "Sign Out", session_path(:id => current_user.id),:method=> :delete,
+            :class=>"btn btn-success signup-login-btn"%>
+      </li>
+      <%else%>
         <li>
           <!-- Sign up Button trigger modal -->
-          <%#= link_to 'Sign up', new_user_path, :class => "btn btn-success signup-login-btn", 'data-toggle' => 'modal', 'data-target'=>'#myModal', remote: true %>
           <%= button_to "Sign up", new_user_path ,:method=> :get, remote: true, :class=>"btn btn-success signup-login-btn", 'data-toggle' => 'modal', 'data-target'=>'#myModal'%>
         </li>
+
         <li>
           <!-- Log in Button trigger modal -->
-          <button type="button" class="btn btn-success signup-login-btn" data-toggle="modal" data-target="#logIn">
-            Log in
-          </button>
+          <%= button_to "Sign In", new_session_path,:method=> :get, remote: true,:class => "btn btn-success signup-login-btn", 'data-toggle' => 'modal','data-target'=>'#myModal' %>
         </li>
+        <%end%>
       </ul>
     </div><!--/.navbar-collapse -->
   </div>
 </nav>
 
 
-<!--Content Area-->
-<div class="container landing-content-area">
-  <h1 class="landing-heding">Interactive-Forum</h1>
-  <h5> PROJECT BY SHARMILA</h5>
-</div>
+
+
+
+
+
