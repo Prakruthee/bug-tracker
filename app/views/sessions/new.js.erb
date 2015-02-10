@@ -1,0 +1,3 @@
+$('#popup_modal').html("<%= escape_javascript(render(:partial=>'layouts/common/login')) %>");
+$('#popup_modal').modal('show');
+session_validator();

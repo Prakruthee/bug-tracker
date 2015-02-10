@@ -1,14 +1,17 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>BugTracker</title>
+	<title>Bug-Tracker</title>
 	<%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
 	<%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
 	<%= csrf_meta_tags %>
 </head>
 <body class="landing-page-bg">
+<%= render :partial=>"layouts/common/header"%>
+<div id="div_flash_message" class="container flash">
+  <%= render :partial=>"/layouts/common/flash_message"%>
+</div>
 	<div id="popup_modal" class="modal fade"></div>
 	<%= yield %>
-
 </body>
 </html>

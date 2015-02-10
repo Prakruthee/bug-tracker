@@ -15,4 +15,14 @@ class User < ActiveRecord::Base
    validates :password,
    :presence => true,
    :length => {:minimum => 6}
+
+   def self.authenticate(email, password)
+  user = find_by_email(email)
+  if user && user.password_digest == BCrypt::Engine.hash_secret(password, user.password_digest)
+    user
+  else
+    nil
+  end
+end
+
 end
