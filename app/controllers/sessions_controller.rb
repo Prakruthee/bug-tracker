@@ -6,6 +6,13 @@ class SessionsController < ApplicationController
     end
   end
 
+  def check_email
+    @user = User.find_by_email(params[:email])
+    respond_to do |format|
+      format.json { render :json => @user.present? }
+   end
+ end
+
   def create
     user = User.authenticate(params[:email], params[:password])
     if user
@@ -20,7 +27,7 @@ class SessionsController < ApplicationController
 
   def destroy
     session[:user_id] = nil
-    flash[:alert] = "user has been Successfully Logged out"
+    flash[:alert] = "Logged out!"
     redirect_to root_path
   end
 end
