@@ -6,12 +6,12 @@ function session_validator() {
      "email": {
        required: true,
        email: true,
-       // remote:"/users/check_email"
+       remote:"/sessions/check_email"
      },
      "password" : {
       required: true,
       minlength: 6
-    },
+    }
   },
 
 
@@ -23,8 +23,9 @@ function session_validator() {
     "email": {
       required: "This field is required",
       email: "Please enter a valid E-Mail address!",
-      remote: "Email has already been taken"
+      remote: "User doesn't exists"
     },
+
     "password": {
       required:"This field is required",
       minlength:"Enter minimum 6 characters!"
