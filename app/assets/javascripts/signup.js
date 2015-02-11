@@ -1,10 +1,7 @@
 function UserValidator() {
-  jQuery.validator.addMethod("startsWithCapital", function(value, element) {
-   return /^[A-Z][a-zA-Z _0-9]+$/.test( value );
- });
 
   jQuery.validator.addMethod("pswd_match",function (value,element){
-    return $("#input_password").val() == $('#input_confirmation_password').val();
+    return $("#user_password").val() == $('#user_password_confirmation').val();
   });
 
   jQuery.validator.addMethod("alpha", function(value, element) {
@@ -16,8 +13,7 @@ function UserValidator() {
     rules: {
       "user[name]": {
         required: true,
-        alpha: true,
-        startsWithCapital: true
+        alpha: true
       },
       "user[email]": {
        required: true,
@@ -39,8 +35,7 @@ function UserValidator() {
   errorClass: "help-block",
   messages: {
    "user[name]": {
-    required: "This field is required",
-    startsWithCapital: "Must begin with Uppercase!"
+    required: "This field is required"
   },
   "user[email]": {
     required: "This field is required",
@@ -55,7 +50,7 @@ function UserValidator() {
   "user[password_confirmation]": {
     required: "This field is required",
     equalTo:"Passwords do not match!",
-    pswd_match: "Password mactches"
+    pswd_match: "Password matches"
   }
 },
 
