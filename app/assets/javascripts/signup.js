@@ -8,12 +8,23 @@ function UserValidator() {
     return this.optional(element) || value == value.match(/^[a-zA-Z ]+$/);
   });
 
+  jQuery.validator.addMethod("usr_format", function(value, element) {
+    return this.optional(element) || value == value.match(/^[0-9\_\.]*[a-zA-Z]+[0-9\_\.]*$/);
+  });
+
   $('#register').validate({
     debug: true,
     rules: {
       "user[name]": {
         required: true,
         alpha: true
+      },
+      "user[username]": {
+        required: true,
+        minlength: 6,
+        maxlength: 256,
+        usr_format: true,
+        remote:"users/check_username"
       },
       "user[email]": {
        required: true,
@@ -35,7 +46,13 @@ function UserValidator() {
   errorClass: "help-block",
   messages: {
    "user[name]": {
-    required: "This field is required"
+    required: "This field is required",
+    alpha: "Should contain only alphabets!"
+  },
+  "user[username]": {
+    required: "This field is required",
+    usr_format: "Should contain only alphabets, numbers and special characters(. and _ )",
+    remote: "Username has already been taken"
   },
   "user[email]": {
     required: "This field is required",
@@ -50,7 +67,7 @@ function UserValidator() {
   "user[password_confirmation]": {
     required: "This field is required",
     equalTo:"Passwords do not match!",
-    pswd_match: "Password matches"
+    pswd_match: "Password doesn't matches"
   }
 },
 
