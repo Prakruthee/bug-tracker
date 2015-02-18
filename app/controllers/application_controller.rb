@@ -1,10 +1,11 @@
 class ApplicationController < ActionController::Base
 
+  before_filter :set_cache_buster
   protect_from_forgery with: :exception
-
   helper_method :current_user
 
   private
+
   def current_user
     current_user ||= User.find(session[:user_id]) if session[:user_id]
   end
@@ -15,4 +16,9 @@ class ApplicationController < ActionController::Base
        redirect_to root_path # halts request cycle
      end
    end
- end
+
+   def set_cache_buster
+    response.headers["Cache-Control"] = "no-cache, no-store, max-age=0, must-revalidate"
+    response.headers["Pragma"] = "no-cache"
+  end
+end

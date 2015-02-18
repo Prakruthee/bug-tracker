@@ -6,7 +6,8 @@ RSpec.describe UsersController, :type => :controller do
   it "should be able to create user" do
     user_params = {
       user: {
-        name: "BBBBB",
+        name: "prakruthi",
+        username: "prakruthis1_",
         email: "adam_25@yopmail.com",
         password: "password",
         password_confirmation: "password"
