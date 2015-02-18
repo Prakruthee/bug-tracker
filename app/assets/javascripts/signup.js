@@ -66,8 +66,7 @@ function UserValidator() {
   },
   "user[password_confirmation]": {
     required: "This field is required",
-    equalTo:"Passwords do not match!",
-    pswd_match: "Password doesn't matches"
+    pswd_match: "Password does not match"
   }
 },
 
