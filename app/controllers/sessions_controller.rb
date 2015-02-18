@@ -6,21 +6,21 @@ class SessionsController < ApplicationController
     end
   end
 
-  def check_email
-    @user = User.find_by_email(params[:email])
+  def check_username
+   @user = User.find_by_username(params[:username])
     respond_to do |format|
       format.json { render :json => @user.present? }
-   end
- end
+    end
+  end
 
   def create
-    user = User.authenticate(params[:email], params[:password])
+    user = User.authenticate(params[:username],params[:password])
     if user
       session[:user_id] = user.id
       flash[:success] = "Signed in Successfully"
       redirect_to users_path, :success => "Logged in!"
     else
-      flash[:alert] = "Invalid email or password"
+      flash[:alert] = "Invalid username or password"
       redirect_to root_path
     end
   end
