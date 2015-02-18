@@ -12,13 +12,14 @@ RSpec.describe User, :type => :model do
 
   describe User do
     it { should validate_presence_of :name }
-    it { should validate_presence_of :username }
-    it { should allow_value('PrakruthiS').for(:username )}
-    # it { should validate_uniqueness_of(:username) }
     it { should validate_presence_of :email }
-    it { should allow_value('something@domain.com').for(:email )}
+    it { should validate_presence_of :username }
     it { should validate_presence_of :password }
-    it { should allow_value('password@1').for(:password )}
+    it { should validate_uniqueness_of(:email) }
+    it { should validate_uniqueness_of(:username) }
+    it { should allow_value('something@domain.com').for(:email)}
+    it { should allow_value('PrakruthiS').for(:username)}
+    it { should allow_value('password@1').for(:password)}
   end
 
 it "should validate username length" do
