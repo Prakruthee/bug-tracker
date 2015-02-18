@@ -3,10 +3,9 @@ function session_validator() {
   $('#sign_in').validate({
     debug: true,
     rules: {
-     "email": {
+     "username": {
        required: true,
-       email: true,
-       remote:"/sessions/check_email"
+       remote:"/sessions/check_username"
      },
      "password" : {
       required: true,
@@ -20,10 +19,9 @@ function session_validator() {
 
   messages: {
 
-    "email": {
+    "username": {
       required: "This field is required",
-      email: "Please enter a valid E-Mail address!",
-      remote: "User doesn't exists"
+      remote: "Username  doesn't exists"
     },
 
     "password": {
@@ -31,7 +29,6 @@ function session_validator() {
       minlength:"Enter minimum 6 characters!"
 
     },
-
   },
 
   highlight: function(element) {
@@ -75,5 +72,4 @@ invalidHandler: function(event, validator) {
        form.submit();
      }
    });
-
 }

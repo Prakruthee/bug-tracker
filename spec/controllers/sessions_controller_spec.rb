@@ -6,7 +6,7 @@ RSpec.describe SessionsController, :type => :controller do
 
   it "should create session" do
     user_params = {
-      email: user.email,
+      username: user.username,
       password: user.password
     }
     session[:user_id] = nil
