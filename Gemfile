@@ -48,3 +48,6 @@ group :development, :test do
   gem 'pry-doc'
   gem 'pry-rails'
 end
+
+gem 'omniauth'
+gem 'omniauth-facebook'
