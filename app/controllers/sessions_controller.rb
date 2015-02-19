@@ -14,7 +14,13 @@ class SessionsController < ApplicationController
   end
 
   def create
-    user = User.authenticate(params[:username],params[:password])
+  if params[:provider] == "facebook"
+    auth = request.env["omniauth.auth"]
+    user = User.where(:provider => auth['provider'],
+    :uid => auth['uid'].to_s).first || User.create_with_omniauth(auth)
+  else
+    user = User.authenticate(params[:username], params[:password])
+  end
     if user
       session[:user_id] = user.id
       flash[:success] = "Signed in Successfully"
