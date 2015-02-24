@@ -10,7 +10,8 @@ class IssuesController < ApplicationController
 
   def create
     @issue= Issue.new(issue_params)
-    if @issue.save
+    if @issue.valid? && @issue.errors.blank?
+      @issue.save
       redirect_to issues_path
     else
       respond_to do |format|

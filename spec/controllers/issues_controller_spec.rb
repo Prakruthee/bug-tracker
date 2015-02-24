@@ -15,7 +15,7 @@ RSpec.describe IssuesController, :type => :controller do
     }
 
     post :create, issue_params
-     expect(Issue.count).to  eq 1
+     expect(Issue.count).to eq 1
 
   end
 end

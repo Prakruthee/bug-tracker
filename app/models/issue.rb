@@ -1,7 +1,5 @@
 class Issue < ActiveRecord::Base
 
-
-
   validates :issue_name, presence: true,
             :length => {:maximum => 34}
 
