@@ -41,6 +41,7 @@ RSpec.describe User, :type => :model do
   end
 
 
+
   it "should validate password length" do
 
     user.password = "sgd"
@@ -54,6 +55,23 @@ RSpec.describe User, :type => :model do
     expect(user).to be_valid
   end
 
+
+
+  it "should validate name" do
+    # checking valid names
+    ["Praveen", "Prakruthi"].each do |n|
+      user.name = n
+      value = user.valid?
+      expect(value).to be_truthy
+    end
+
+    # checking invalid names
+    ["n", "m"].each do |n|
+      user.name = n
+      value = user.valid?
+      expect(value).to be_falsy
+    end
+  end
 
   it "should validate email" do
     # checking valid email

@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+
   get "users/check_username"=>"users#check_username"
   get "users/check_email"=>"users#check_email"
   root 'welcome#index'
@@ -9,4 +10,5 @@ Rails.application.routes.draw do
   resources :users
   resources :sessions, except: :show
   resources :issues
+
 end
