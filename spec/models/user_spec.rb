@@ -22,7 +22,7 @@ RSpec.describe User, :type => :model do
     it { should allow_value('password@1').for(:password)}
   end
 
-it "should validate username length" do
+  it "should validate username length" do
 
     user.username = "sg"*256
     user.valid?
