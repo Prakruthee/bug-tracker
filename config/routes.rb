@@ -8,4 +8,5 @@ Rails.application.routes.draw do
   get "sessions/check_username"=>"sessions#check_username"
   resources :users
   resources :sessions, except: :show
+  resources :issues
 end
