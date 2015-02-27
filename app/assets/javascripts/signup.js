@@ -1,4 +1,5 @@
-function UserValidator() {
+function SignUpValidator() {
+
   jQuery.validator.addMethod("pswd_match",function (value,element){
     return $("#user_password").val() == $('#user_password_confirmation').val();
   });

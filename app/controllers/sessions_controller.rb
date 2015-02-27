@@ -24,7 +24,11 @@ class SessionsController < ApplicationController
     if user
       session[:user_id] = user.id
       flash[:success] = "Signed in Successfully"
-      redirect_to users_path, :success => "Logged in!"
+      if current_user.issues.any?
+        redirect_to issues_path, :success => "Logged in!"
+      else
+        redirect_to users_path, :success => "Logged in!"
+      end
     else
       flash[:alert] = "Invalid username or password"
       redirect_to root_path

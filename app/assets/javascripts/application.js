@@ -18,4 +18,5 @@
 //= require turbolinks
 //= require signup
 //= require signin
+//= require creation
 //= require_tree .

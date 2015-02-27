@@ -1,0 +1,16 @@
+
+<% if issue.status == "open" %>
+  <div class="well open event-panels">
+<% else %>
+  <div class="well">
+<% end %>
+  <p><%= issue.issue_name.titleize%></p>
+  <%if issue.user.present?%>
+    <div class="organiser">
+      <%=issue.user.name%>
+    </div>
+  <%end%>
+</div>
+
+
+

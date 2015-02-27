@@ -33,6 +33,7 @@ class UsersController < ApplicationController
     else
       respond_to do |format|
         format.html { render action: "new" }
+        format.js { render action: "new" }
       end
     end
   end
