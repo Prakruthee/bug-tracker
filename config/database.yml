@@ -3,9 +3,9 @@ it:
   encoding: unicode
   database: bugtracker_it
   pool: 10
-  username: bugtracker_it
-  password: zabC8uo9rqZp2P5
-  host: d-qwinix-awsw2-internal-apps-1.cgcl3vns0ith.us-west-2.rds.amazonaws.com
+  username: postgres
+  password: password
+  host: localhost
   port: 5432
 
 development:
@@ -24,17 +24,6 @@ test:
   encoding: unicode
   reconnect: false
   database: bug_tracker_test
-  pool: 5
-  username: postgres
-  password: prakruthi
-  host: localhost
-  port: 5432
-
-it:
-  adapter: postgresql
-  encoding: unicode
-  reconnect: false
-  database: bug_tracker_it
   pool: 5
   username: postgres
   password: prakruthi

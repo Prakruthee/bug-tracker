@@ -1,4 +1,4 @@
-  Rails.application.configure do
+  BugTracker.application.configure do
 
     config.cache_classes = true
     config.eager_load = true
@@ -18,8 +18,10 @@
     config.i18n.fallbacks = true
     config.active_support.deprecation = :notify
     config.log_formatter = ::Logger::Formatter.new
-    config.action_mailer.asset_host = 'http://it.bugtracker.qwinixtech.com/'
-    config.action_mailer.default_url_options = { :host => 'it.bugtracker.qwinixtech.com' }
+    config.action_mailer.asset_host = 'http://it.bug-tracker.qwinixtech.com
+/'
+    config.action_mailer.default_url_options = { :host => 'it.bug-tracker.qwinixtech.com
+' }
     config.action_mailer.perform_deliveries = true
     config.action_mailer.raise_delivery_errors = true
     config.action_mailer.default :charset => "utf-8"
