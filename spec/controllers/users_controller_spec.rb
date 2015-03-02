@@ -10,6 +10,7 @@ RSpec.describe UsersController, :type => :controller do
       user_params = {
         user: {
           name: "Bobmiller",
+          username: "Prakruthis.20",
           email: "adam@trimediatlantic.com",
           password: "Password@1",
           password_confirmation: "Password@1"

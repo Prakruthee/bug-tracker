@@ -1,16 +1,16 @@
-
-<% if issue.status == "open" %>
-  <div class="well open event-panels">
-<% else %>
-  <div class="well">
-<% end %>
-  <p><%= issue.issue_name.titleize%></p>
-  <%if issue.user.present?%>
-    <div class="organiser">
-      <%=issue.user.name%>
+<div class="event-panels">
+  <div class="row">
+    <div class="col-sm-2"></div>
+    <div class="col-sm-10">
+        <div class="event-title"><%= issue.issue_name.titleize%></div>
+        <%if issue.user.present?%>
+          <div class="organiser">
+            <%=issue.user.name%>
+          </div>
+        <%end%>
+        <div class="participants"><a href="#">Comments</a> <span class="status"><%= issue.status%></span></div>
     </div>
-  <%end%>
+  </div>
 </div>
-
 
 

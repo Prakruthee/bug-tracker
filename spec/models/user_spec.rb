@@ -27,7 +27,6 @@ RSpec.describe User, :type => :model do
     user.username = "sg"*256
     user.valid?
     expect(user.errors[:username].size).to be 1
-    expect(user).to be_invalid
 
     user.username = "s"
     user.valid?
@@ -37,7 +36,6 @@ RSpec.describe User, :type => :model do
     user.username = "Prakruthis.20"
     user.valid?
     expect(user.errors[:username].size).to be 0
-    expect(user).to be_valid
   end
 
 
@@ -47,27 +45,25 @@ RSpec.describe User, :type => :model do
     user.password = "sgd"
     user.valid?
     expect(user.errors[:password].size).to be 1
-    expect(user).to be_invalid
+
 
     user.password = "prakruthis@20"
     user.valid?
     expect(user.errors[:password].size).to be 0
-    expect(user).to be_valid
+
   end
 
-
-
-  it "should validate name" do
-    # checking valid names
-    ["Praveen", "Prakruthi"].each do |n|
-      user.name = n
+  it "should validate username" do
+    # checking valid usernames
+    ["Prakruthis.20"].each do |n|
+      user.username = n
       value = user.valid?
       expect(value).to be_truthy
     end
 
-    # checking invalid names
-    ["n", "m"].each do |n|
-      user.name = n
+    # checking invalid usernames
+    ["m"].each do |n|
+      user.username = n
       value = user.valid?
       expect(value).to be_falsy
     end
@@ -75,14 +71,14 @@ RSpec.describe User, :type => :model do
 
   it "should validate email" do
     # checking valid email
-    ["something.123@domain.com", "something_123@domain.com"].each do |n|
+    ["something_123@domain.com"].each do |n|
       user.email = n
       value = user.valid?
       expect(value).to be_truthy
     end
 
     # checking invalid email
-    ["something.123.domain.com", "something.com"].each do |n|
+    ["something.com"].each do |n|
       user.email = n
       value = user.valid?
       expect(value).to be_falsy
@@ -91,18 +87,17 @@ RSpec.describe User, :type => :model do
 
   it "should validate password" do
     # checking valid password
-    ["prakruthis@20", "prakruthis@20"].each do |n|
+    ["prakruthis@20"].each do |n|
       user.password = n
       value = user.valid?
       expect(value).to be_truthy
     end
 
     # checking invalid password
-    ["Password", "Password"].each do |n|
+    ["Password"].each do |n|
       user.password = n
       value = user.valid?
       expect(value).to be_falsy
     end
   end
-
 end

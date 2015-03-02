@@ -1,6 +1,6 @@
 class IssuesController < ApplicationController
 
-before_filter :require_login
+  before_filter :require_login
   def new
     @issue = Issue.new
     respond_to do |format|
@@ -10,7 +10,9 @@ before_filter :require_login
   end
 
   def create
-    @issue = current_user.issues.build(issue_params) if current_user
+    @issue= Issue.new(issue_params)
+    @issue.user_id = current_user.id
+
     if @issue.valid? && @issue.errors.blank?
       @issue.save
       redirect_to issues_path
@@ -20,6 +22,7 @@ before_filter :require_login
       end
     end
   end
+
 
   def index
     relation = Issue.where("")
@@ -53,6 +56,4 @@ before_filter :require_login
   def issue_params
     params.require(:issue).permit(:issue_name, :issue_type, :comment, :description, :status)
   end
-
-
 end

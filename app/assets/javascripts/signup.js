@@ -30,16 +30,16 @@ function SignUpValidator() {
        required: true,
        email: true,
        remote:"users/check_email"
-     },
-     "user[password]" : {
+      },
+      "user[password]" : {
       required: true,
       minlength: 6
-    },
-    "user[password_confirmation]": {
+      },
+      "user[password_confirmation]": {
       required: true,
       pswd_match: true
-    }
-  },
+      }
+    },
 
   errorElement: "span",
 

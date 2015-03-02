@@ -29,7 +29,7 @@ class UsersController < ApplicationController
     user= User.new(user_params)
     if user.save
       session[:user_id] = user.id
-      redirect_to users_path, :notice => "Signed up!"
+      redirect_to issues_path, :notice => "Signed up!"
     else
       respond_to do |format|
         format.html { render action: "new" }
