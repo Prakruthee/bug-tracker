@@ -1,5 +1,6 @@
 set :stage, :it
 set :branch, :master
+set :rails_env, :it
 set :deploy_to, '/u01/apps/qwinix/bug-tracker'
 set :log_level, :debug
 
