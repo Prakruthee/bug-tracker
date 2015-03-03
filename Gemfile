@@ -52,3 +52,4 @@ end
 gem 'omniauth'
 gem 'omniauth-facebook'
 gem 'kaminari'
+gem 'capistrano', '~> 3.3.0'
