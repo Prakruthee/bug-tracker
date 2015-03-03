@@ -5305,6 +5305,7 @@ a.list-group-item-danger.active:focus {
 }
 .panel-heading > .dropdown .dropdown-toggle {
   color: inherit;
+  text-decoration: bold;
 }
 .panel-title {
   margin-top: 0;

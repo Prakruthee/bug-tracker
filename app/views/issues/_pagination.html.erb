@@ -1,0 +1,8 @@
+<div class="cl"></div>
+
+<% if @issue.any? %>
+   <%= content_tag :div, :class=>"pull-right" do %>
+     <%= paginate @issues, :remote => true %>
+   <% end %>
+<% end %>
+<div class="cl"></div>

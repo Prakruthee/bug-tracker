@@ -1,4 +1,4 @@
-function UserValidator() {
+function SignUpValidator() {
 
   jQuery.validator.addMethod("pswd_match",function (value,element){
     return $("#user_password").val() == $('#user_password_confirmation').val();
@@ -30,16 +30,16 @@ function UserValidator() {
        required: true,
        email: true,
        remote:"users/check_email"
-     },
-     "user[password]" : {
+      },
+      "user[password]" : {
       required: true,
       minlength: 6
-    },
-    "user[password_confirmation]": {
+      },
+      "user[password_confirmation]": {
       required: true,
       pswd_match: true
-    }
-  },
+      }
+    },
 
   errorElement: "span",
 

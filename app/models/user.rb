@@ -1,5 +1,7 @@
 class User < ActiveRecord::Base
 
+
+  has_many :issues
   has_secure_password
 
   validates :name, presence: true

@@ -24,14 +24,16 @@ class UsersController < ApplicationController
     end
   end
 
+
   def create
     user= User.new(user_params)
     if user.save
       session[:user_id] = user.id
-      redirect_to users_path, :notice => "Signed up!"
+      redirect_to issues_path, :notice => "Signed up!"
     else
       respond_to do |format|
         format.html { render action: "new" }
+        format.js { render action: "new" }
       end
     end
   end
@@ -44,4 +46,5 @@ class UsersController < ApplicationController
   def user_params
     params.require(:user).permit(:name, :username, :email, :password, :password_confirmation)
   end
+
 end

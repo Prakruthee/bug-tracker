@@ -1,0 +1,25 @@
+<div class="container container-margin">
+
+  <div id="create-button" class="row">
+    <%= button_to "Create", new_issue_path ,:method=> :get, remote: true, :class=>"btn btn-warning btn-md pull-right", 'data-toggle' => 'modal', 'data-target'=>'#myCreate'%>
+  </div>
+
+  <div class="row">
+    <!--Event panels-->
+    <div class="col-sm-5">
+      <% @issues.each do |issue| %>
+        <%= link_to issue_path(issue),remote: true do %>
+          <%= render :partial => "ticket",:locals=>{:issue=>issue} %>
+        <%end%>
+      <%end%>
+    </div>
+
+    <!--Event Details-->
+    <div class="col-sm-7" id="panel_show">
+      <%= render :partial=>"issue"%>
+    </div>
+  </div>
+
+  <div class="pagination"><%= paginate @issues %></div>
+
+</div>

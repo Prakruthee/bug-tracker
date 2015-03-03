@@ -13,6 +13,8 @@
  *= require bootstrap
  *= require style
  *= require override-bootstrap
+ *= require pagination
  *= require_self
  *= require_tree .
  */
+

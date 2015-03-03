@@ -10,8 +10,11 @@ body {
     border-radius: 0px;margin-bottom: 0px;
 }
 .navbar-brand {
-     font-size: 28px;font-weight: 600;
+  font-family: 'Lobster', cursive;
+  font-size: 28px;
 }
+
+i.fa { color: #BF364F }
 .modal-dialog {
     margin: 80px auto;
     width: 500px;
