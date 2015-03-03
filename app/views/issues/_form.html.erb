@@ -1,0 +1,47 @@
+<%= form_for @issue, html:{:class =>"form-horizontal", :id=>"creation"} do |f| %>
+
+  <div class="modal-body">
+
+    <div class="form-group">
+      <label for="Issues3" class="col-sm-4 control-label">Issue * :</label>
+      <div class="col-sm-8">
+        <%= f.text_field :issue_name, :class =>"form-control",:id =>"Issues3", :placeholder => "Issue", :maxlength => 34 %>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="IssuesType3" class="col-sm-4 control-label">Issues Type * :</label>
+      <div class="col-sm-8">
+        <%= f.select :issue_type, options_for_select([['Bugs', 'bugs'], ['Issues', 'issues'],['Tasks', 'tasks'],['General', 'general']]), {:prompt => "Select Issue type"}, {class: 'form-control'}  %>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="Description3" class="col-sm-4 control-label">Description * :</label>
+      <div class="col-sm-8">
+       <%= f.text_area :description, :size=>"50x7", :class =>"form-control",:id =>"Description3", :placeholder => "Description" %>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="Comment3" class="col-sm-4 control-label">Comment :</label>
+      <div class="col-sm-8">
+        <%= f.text_field :comment , :class =>"form-control",:id =>"Comment3", :placeholder => "Comment"%>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="Status3" class="col-sm-4 control-label">Status :</label>
+      <div class="col-sm-8">
+        <%= f.select :status, options_for_select([['Open', 'open'], ['Close', 'close']]),{}, {class: 'form-control'}  %>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="modal-footer">
+    <%= f.submit "OK", :class=>"btn btn-primary ok-btn-padding" %>
+    <button data-dismiss="modal" class="btn btn-default ok-btn-padding" type="button">Cancel</button>
+  </div>
+
+<%end%>

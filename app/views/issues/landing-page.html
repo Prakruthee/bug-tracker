@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta content="width=device-width, initial-scale=1.0" name="viewport">
+        <meta content="" name="description">
+        <meta content="" name="author">
+        <link href="../../assets/ico/favicon.png" rel="shortcut icon">
+        <title>Landing Page</title>
+        <link rel="stylesheet" href="assets/css/bootstrap.css" />
+        <link rel="stylesheet" href="assets/css/override-bootstrap.css" />
+        <link rel="stylesheet" href="assets/css/style.css" />
+    </head>
+    <!--Body container-->
+    <body>
+        <!--    Header-->
+        <nav class="navbar navbar-inverse ">
+            <div class="container">
+                <div class="navbar-header">
+                    <button  data-target="#navbar" data-toggle="collapse" class="navbar-toggle collapsed" type="button">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a href="index.html" class="navbar-brand">Bug Tracker</a>
+                </div>
+                <div class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li>
+                            <img src="assets/images/Profile-Pic.jpg" alt="Profile picture" class="img-rounded profile-pic">
+                            <span class="profile-name">Prakruthi</span>
+                        </li>
+                        <li>
+                            <!-- Sign up Button trigger modal -->
+                            <button type="button" class="btn btn-success signup-login-btn">
+                                Sign Out
+                            </button>
+                        </li>
+                    </ul>
+                </div><!--/.navbar-collapse -->
+            </div>
+        </nav>
+       <div id="div_flash_message" class="container">
+
+       </div>
+        <!--Content Area-->
+        <div class="container">
+            <div class="row margin-bottom">
+                <!--Create Button trigger modal -->
+                <button type="button" class="btn btn-warning btn-md pull-right" data-toggle="modal" data-target="#myCreate">
+                    Create
+                </button>
+
+                <!-- Modal -->
+                <div class="modal fade" id="myCreate" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                <h4 class="modal-title" id="myModalLabel">Create New Event</h4>
+                            </div>
+                            <div class="modal-body">
+                                <form class="form-horizontal">
+                                    <div class="form-group">
+                                        <label for="Issues3" class="col-sm-4 control-label">Issue * :</label>
+                                        <div class="col-sm-8">
+                                            <input type="text" class="form-control" id="Issues3" placeholder="Issue">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="IssuesType3" class="col-sm-4 control-label">Issues Type * :</label>
+                                        <div class="col-sm-8">
+                                            <select class="form-control" id="IssuesType3">
+                                                <option>Bug</option>
+                                                <option>Close</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="Description3" class="col-sm-4 control-label">Description * :</label>
+                                        <div class="col-sm-8">
+                                            <textarea class="form-control" id="Description3" rows="3" placeholder="Description"></textarea>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="Comment3" class="col-sm-4 control-label">Comment :</label>
+                                        <div class="col-sm-8">
+                                            <input type="text" class="form-control" id="Comment3" placeholder="Comment">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="Status3" class="col-sm-4 control-label">Status :</label>
+                                        <div class="col-sm-8">
+                                            <select class="form-control" id="Status3">
+                                                <option>Open</option>
+                                                <option>Close</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="modal-footer">
+                                <button class="btn btn-primary ok-btn-padding" type="button">OK</button>
+                                <button data-dismiss="modal" class="btn btn-default ok-btn-padding" type="button">Cancel</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+<!--                Event panels-->
+                <div class="col-sm-5">
+                    <div class="event-panels">
+                        <div class="row">
+                            <div class="col-sm-2">
+                                <div class="order-number">1 </div>
+                            </div>
+                            <div class="col-sm-10">
+                                <div class="event-title">UI Bug fixes (Issue) </div>
+                                <div class="organiser"> Prakruthi</div>
+                                <div class="participants"><a href="#">Comments</a> <span class="status">Open</span></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="event-panels active">
+                        <div class="row">
+                            <div class="col-sm-2">
+                                <div class="order-number">2 </div>
+                            </div>
+                            <div class="col-sm-10">
+                                <div class="event-title">HTML bug fixes </div>
+                                <div class="organiser"> Praveen</div>
+                                <div class="participants"><a href="#">Comments</a> <span class="status">Open</span></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="event-panels">
+                        <div class="row">
+                            <div class="col-sm-2">
+                                <div class="order-number">3 </div>
+                            </div>
+                            <div class="col-sm-10">
+                                <div class="event-title">Ajax Bug fixes  </div>
+                                <div class="organiser"> Prakruthi</div>
+                                <div class="participants"><a href="#">Comments</a> <span class="status">Closed</span></div>
+                            </div>
+                        </div>
+                    </div>
+   <div class="event-panels">
+                        <div class="row">
+                            <div class="col-sm-2">
+                                <div class="order-number">4 </div>
+                            </div>
+                            <div class="col-sm-10">
+                                <div class="event-title">UI Bug fixes  </div>
+                                <div class="organiser"> Kedar</div>
+                                <div class="participants"><a href="#">Comments</a> <span class="status">Closed</span></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+<!--Event Details-->
+                <div class="col-sm-7">
+                    <div class="events-details">
+                        <form class="form-horizontal">
+                            <div class="form-group">
+                                <label for="Issues3" class="col-sm-3 control-label">Issue * :</label>
+                                <div class="col-sm-9">
+                                    <input type="text" class="form-control" id="Issues3" placeholder="Issue">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="IssuesType3" class="col-sm-3 control-label">Issues Type * :</label>
+                                <div class="col-sm-9">
+                                    <select class="form-control" id="IssuesType3">
+                                        <option>Bug</option>
+                                        <option>Close</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="Description3" class="col-sm-3 control-label">Description * :</label>
+                                <div class="col-sm-9">
+                                    <textarea class="form-control" id="Description3" rows="3" placeholder="Description"></textarea>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="Comment3" class="col-sm-3 control-label">Comment :</label>
+                                <div class="col-sm-9">
+                                    <input type="text" class="form-control" id="Comment3" placeholder="Comment">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="Status3" class="col-sm-3 control-label">Status :</label>
+                                <div class="col-sm-9">
+                                    <select class="form-control" id="Status3">
+                                        <option>Open</option>
+                                        <option>Close</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-sm-offset-9 col-sm-3 float-right">
+                                    <button type="submit" class="btn btn-primary">OK</button>
+                                    <button class="btn btn-default"  type="button">Cancel</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <!--pagination-->
+            <div>
+                <nav>
+                    <ul class="pagination">
+                        <li>
+                            <a href="#" aria-label="Previous">
+                                <span aria-hidden="true">&laquo;</span>
+                            </a>
+                        </li>
+                        <li><a href="#">Page 1</a></li>
+                        <li><a href="#">Page 2</a></li>
+                        <li><a href="#">Page 3</a></li>
+                        <li>
+                            <a href="#" aria-label="Next">
+                                <span aria-hidden="true">&raquo;</span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+
+        <!--    Footer-->
+
+        <script src="assets/js/jquery.js"></script>
+        <script src="assets/js/bootstrap.js"></script>
+
+    </body>
+</html>

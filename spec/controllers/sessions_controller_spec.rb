@@ -18,6 +18,5 @@ RSpec.describe SessionsController, :type => :controller do
     session[:user_id] = user.id
     delete :destroy, :id => user.id
     expect(session[:user_id]).to eq nil
-
   end
 end

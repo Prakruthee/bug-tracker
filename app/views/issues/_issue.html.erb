@@ -1,0 +1,24 @@
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <%= @issue.issue_name.titleize %>
+    <span class="pull-right">Date: </b><%= @issue.created_at %></span>
+  </div>
+
+  <div class="panel-body">
+    <p><b>Type: </b><%= @issue.issue_type.titleize %></p>
+    <br></br>
+    <p><b>Description: </b><%= @issue.description %></p>
+    <br></br>
+    <% if !@issue.comment.empty? %>
+      <p><b>Comment: </b><%= @issue.comment.titleize %></p>
+    <% end %>
+    <br></br>
+    <p><b>Status: <%= @issue.status.titleize %></p>
+    <br></br>
+    <% if @issue.user_id == current_user.id %>
+      <%= button_to "Edit", edit_issue_path(@issue) ,:method=> :get, remote: true, :class=>"btn btn-primary", 'data-toggle' => 'modal', 'data-target'=>'#myCreate'%>
+    <% end %>
+  </div>
+
+</div>
+

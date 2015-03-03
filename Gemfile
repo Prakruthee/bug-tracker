@@ -43,7 +43,7 @@ gem 'rb-readline', '~> 0.5.2'
 
 group :development, :test do
   gem 'rspec-rails', '~> 3.0'
-  gem 'factory_girl_rails'
+  gem 'factory_girl_rails', '~> 4.5.0'
   gem 'shoulda', '~> 3.5.0'
   gem "awesome_print"
   gem 'pry'
@@ -53,4 +53,5 @@ end
 
 gem 'omniauth'
 gem 'omniauth-facebook'
+gem 'kaminari'
 gem 'capistrano', '~> 3.3.0'
