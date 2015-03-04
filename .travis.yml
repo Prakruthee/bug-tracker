@@ -16,7 +16,7 @@ before_install:
 - "echo 'gem: --no-ri --no-rdoc' > ~/.gemrc"
 before_script:
 - "cp config/database.travis.yml config/database.yml"
-- "cp config/secrets.example.yml config/secrets.yml"
+- "cp config/security.example.yml config/security.yml"
 - "psql -c 'create database bug_tracker_test' -U postgres"
 - "RAILS_ENV=$RAILSENV bundle exec rake db:migrate"
 - "rm -fR public/assets/*"

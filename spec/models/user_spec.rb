@@ -55,49 +55,37 @@ RSpec.describe User, :type => :model do
 
   it "should validate username" do
     # checking valid usernames
-    ["Prakruthis.20"].each do |n|
-      user.username = n
+      user.username = "prakruthi.20"
       value = user.valid?
       expect(value).to be_truthy
-    end
 
     # checking invalid usernames
-    ["m"].each do |n|
-      user.username = n
+      user.username = "m"
       value = user.valid?
       expect(value).to be_falsy
-    end
   end
 
   it "should validate email" do
     # checking valid email
-    ["something_123@domain.com"].each do |n|
-      user.email = n
+      user.email = "something_123@domain.com"
       value = user.valid?
       expect(value).to be_truthy
-    end
 
     # checking invalid email
-    ["something.com"].each do |n|
-      user.email = n
+      user.email = "something.com"
       value = user.valid?
       expect(value).to be_falsy
-    end
   end
 
   it "should validate password" do
     # checking valid password
-    ["prakruthis@20"].each do |n|
-      user.password = n
+      user.password = "prakruthi@20"
       value = user.valid?
       expect(value).to be_truthy
-    end
 
     # checking invalid password
-    ["Password"].each do |n|
-      user.password = n
+      user.password = "pas"
       value = user.valid?
       expect(value).to be_falsy
-    end
   end
 end
