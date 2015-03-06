@@ -24,3 +24,30 @@ textarea.form-control{
    resize: none;
 }
 
+.issue_contenet{
+  height: 350px;
+   overflow-y:scroll;
+}
+
+.edit-fix{
+  margin-left: 18px;
+  margin-top: -8px;
+  margin-bottom: 7px;
+}
+.status_close{
+  background-color: red;
+  color: white;
+  float: right;
+  width: 45px;
+  text-align: center;
+  border-radius: 20px;
+}
+
+.status_open{
+  background-color: green;
+  color: white;
+  float: right;
+  width: 45px;
+  text-align: center;
+  border-radius: 20px;
+}

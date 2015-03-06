@@ -3,20 +3,32 @@
   <div id="create-button" class="row">
     <%= button_to "Create", new_issue_path ,:method=> :get, remote: true, :class=>"btn btn-warning btn-md pull-right", 'data-toggle' => 'modal', 'data-target'=>'#myCreate'%>
   </div>
-
   <div class="row">
     <!--Event panels-->
     <div class="col-sm-5">
+      <%if @issues.present?%>
       <% @issues.each do |issue| %>
         <%= link_to issue_path(issue),remote: true do %>
           <%= render :partial => "ticket",:locals=>{:issue=>issue} %>
         <%end%>
       <%end%>
+      <%else%>
+      <div class="jumbotron">
+      <h4>No issues created</h4>
+      </div>
+      <%end%>
     </div>
 
     <!--Event Details-->
     <div class="col-sm-7" id="panel_show">
+    <%if @issues.present?%>
       <%= render :partial=>"issue"%>
+      <%else%>
+      <div class="jumbotron">
+      <h4>No issues created</h4>
+      </div>
+      <%end%>
+
     </div>
   </div>
 
