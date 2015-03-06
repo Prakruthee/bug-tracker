@@ -8,7 +8,7 @@
             <%= issue.user.name%>
           </div>
         <%end%>
-        <div class="participants"><a href="#">Comments</a> <span class="status">
+        <div class="participants"><%= link_to "Comment", comment_path(issue) %> <span class="status">
         <%if issue.status=="open"%>
         <span class="status_open "><%= issue.status%></span>
         <%else%>
