@@ -1,0 +1,29 @@
+<div class="container">
+  <div class="">
+    <div class="row">
+      <div class="col-sm-2">
+        <div class="strong text-right">Title :</div>
+      </div>
+      <div class="col-sm-10"><%= @issue.issue_name %></div>
+    </div>
+    <div class="row">
+      <div class="col-sm-2">
+        <div class="strong text-right">Description :</div>
+      </div>
+      <div class="col-sm-10">
+        <%= @issue.description %>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-2">
+        <div class="strong text-right">Status :</div>
+      </div>
+      <div class="col-sm-10">Close</div>
+    </div>
+  </div>
+
+  <hr>
+  <%= render :partial => "update" %>
+</div>
+
+

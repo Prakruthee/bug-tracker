@@ -10,5 +10,6 @@ Rails.application.routes.draw do
   resources :users
   resources :sessions, except: :show
   resources :issues
+  resources :comments
 
 end
