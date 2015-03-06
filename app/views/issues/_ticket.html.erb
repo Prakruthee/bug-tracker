@@ -5,12 +5,16 @@
         <div class="event-title"><%= issue.issue_name.titleize%></div>
         <%if issue.user.present?%>
           <div class="organiser">
-            <%=issue.user.name%>
+            <%= issue.user.name%>
           </div>
         <%end%>
-        <div class="participants"><a href="#">Comments</a> <span class="status"><%= issue.status%></span></div>
+        <div class="participants"><a href="#">Comments</a> <span class="status">
+        <%if issue.status=="open"%>
+        <span class="status_open "><%= issue.status%></span>
+        <%else%>
+        <span class="status_close"><%= issue.status%></span>
+        <%end%>
+        </div>
     </div>
   </div>
 </div>
-
-

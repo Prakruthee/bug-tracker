@@ -1,18 +1,25 @@
-<% if flash.any? %>
-  <%
-    flash_message = (request.xhr? ? flash.now[ flash.keys.first ] : flash[ flash.keys.first ]).to_s.strip
-    cls_name = "alert-info"
-    cls_name = 'alert-success' if flash.now[:success] || flash[:success]
-    cls_name = 'alert-warning' if flash.now[:alert] || flash[:alert]
-    cls_name = 'alert-danger' if flash.now[:error] || flash[:error]
-  %>
-  <% unless flash_message.blank? %>
-    <div class="<%= request.xhr? ? 'pt-10' : 'pt-20' %>">
-      <div class="alert <%= cls_name %> fade in margin-bottom-10" data-alert="alert" id="div_flash_container">
-        <a class="close" data-dismiss='alert' href="#">×</a>
-        <p><%= flash_message %></p>
-      </div>
-    </div>
-  <% end %>
+ <%
+ if request.xhr?
+  flash_message = flash.now[:success] || flash.now[:notice] || flash.now[:alert] || flash.now[:error]
+  style_classes = ""
+ else
+  style_classes = ""
+  flash_message = flash[:success] || flash[:notice] || flash[:alert] || flash[:error]
+ end
+ cls_name = "alert-info"
+ cls_name = 'alert-success' if flash.now[:success] || flash[:success]
+ cls_name = 'alert-warning' if flash.now[:alert] || flash[:alert]
+ cls_name = 'alert-danger' if flash.now[:error] || flash[:error]
 
-<% end %>
+ flash_message = flash_message.strip if flash_message
+
+ %>
+
+ <% unless flash_message.blank? %>
+ <div id = "flash">
+  <div class="<%= style_classes %> alert <%= cls_name %> fade in mb-10" data-alert="alert">
+    <a class="close" data-dismiss='alert' href="#">×</a>
+    <p><%= flash_message %></p>
+  </div>
+ </div>
+ <% end %>

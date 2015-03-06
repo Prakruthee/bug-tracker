@@ -1,7 +1,7 @@
 it:
   adapter: postgresql
   encoding: unicode
-  database: bugtracker_it
+  database: bugtrackers_it
   pool: 10
   username: postgres
   password: password
@@ -12,7 +12,7 @@ development:
   adapter: postgresql
   encoding: unicode
   reconnect: false
-  database: bug_tracker_development
+  database: bug_trackers_development
   pool: 5
   username: postgres
   password: prakruthi
@@ -23,7 +23,7 @@ test:
   adapter: postgresql
   encoding: unicode
   reconnect: false
-  database: bug_tracker_test
+  database: bug_trackers_test
   pool: 5
   username: postgres
   password: prakruthi
