@@ -51,6 +51,10 @@ ul li span.profile-name {
 .comments-buttons {
     padding: 15px;text-align: right;
 }
-.jjjj{
+.user-margin{
+  margin-top: 20px;
+}
+
+.comment_space{
   margin-top: 20px;
 }

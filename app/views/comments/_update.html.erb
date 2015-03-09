@@ -3,11 +3,11 @@
     <div class="col-sm-12 commenmt-area-height">
 
       <% @comments.each do |comment| %>
-      <div class="row jjjj">
+      <div class="row user-margin">
         <div class="col-sm-2">
           <div class="strong text-right">User :</div>
         </div>
-        <div class="col-sm-10"><%= comment.user.username %></div>
+        <div class="col-sm-10"><%= comment.user.name %></div>
       </div>
 
       <div class="row comments-margin">
@@ -25,10 +25,10 @@
 
     <%= form_for :comment, :url => comment_path(@issue), :method => :patch do |f| %>
     <div class="row">
-      <div class="col-sm-2">
+      <div class="col-sm-2 comment_space">
         <div class="strong text-right">Add comments :</div>
       </div>
-      <div class="col-sm-10">
+      <div class="col-sm-10 comment_space">
       <%= f.text_area :comment_description, :row=>3, :class =>"form-control",:id =>"Description3", :placeholder => "Add comments here ..." %>
       </div>
     </div>
