@@ -1,0 +1,8 @@
+<html>
+  <body>
+    <h2>Hi, <%= @comment.issue.user.name %>!</h2>
+    <p>You got a comment</p>
+    <h3>For issue:</h3><p><%= @comment.issue.issue_name%></p>
+    <h3>Comment:</h3><p><%= @comment.comment_description %></p>
+  </body>
+</html>
