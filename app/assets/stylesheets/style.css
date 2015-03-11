@@ -58,3 +58,8 @@ ul li span.profile-name {
 .comment_space{
   margin-top: 20px;
 }
+
+.commenmt-area-height{
+  height: 250px;
+   overflow-y:scroll;
+}

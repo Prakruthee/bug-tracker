@@ -1,5 +1,5 @@
 class UserMails < ActionMailer::Base
-  default  from: "psudanandappa@qwinixtech.com"
+  default  from: "prakruthis320@gmail.com"
 
   def send_mail(comment)
       @comment = comment
