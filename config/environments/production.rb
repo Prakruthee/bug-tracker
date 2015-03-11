@@ -91,8 +91,8 @@ Rails.application.configure do
       :port => 587,
       :domain => "sendgrid.com",
       :authentication => :login,
-      :user_name =>"prakruthis.20",
-      :password => "prakruthis20"
+      :user_name =>"prakruthi",
+      :password => "password123"
     }
   end
 end
