@@ -2,10 +2,10 @@
   <div class="row">
     <div class="col-sm-2"></div>
     <div class="col-sm-10">
-        <div class="event-title"><%= issue.issue_name.titleize%></div>
+        <div class="event-title"><span><b>Issuename: </b><%= issue.issue_name.titleize%></div></span>
         <%if issue.user.present?%>
           <div class="organiser">
-            <%= issue.user.name%>
+            <span><b>Username: </b><%= issue.user.name%></span>
           </div>
         <%end%>
         <div class="participants"><%= link_to "Comment", comment_path(issue) %> <span class="status">
