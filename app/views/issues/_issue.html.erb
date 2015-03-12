@@ -1,7 +1,7 @@
 <div class="panel panel-default">
   <div class="panel-heading">
     <b>Type: </b><%= @issue.issue_type.titleize %>
-    <span class="pull-right"><b>Date: </b><%= @issue.created_at %></span>
+    <span class="pull-right"><b>Date: </b><%= @issue.created_at.strftime("%I:%M %P %b %d") %></span>
   </div>
 
   <div class="panel-body issue_contenet">

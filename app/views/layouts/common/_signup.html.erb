@@ -47,6 +47,17 @@
         </div>
       </div>
 
+      <div class="form-group">
+        <label for="inputstatus" class="col-sm-3 control-label">Profile Pic</label>
+        <div class="col-sm-3">
+            <%= image_tag "Profile-Pic.jpg", :alt=>"image", :class=>"img-thumbnail", :id => "preview" %>
+        </div>
+        <div class="col-sm-3">
+          <%= f.file_field :image, :id=>"exampleInputFile", :disabled => "disabled" %>
+        </div>
+        <div class="col-sm-2"></div>
+      </div>
+
       <div class="modal-footer">
        <%= f.submit "OK", :class=>"btn btn-primary ok-btn-padding" %>
        <button type="button" class="btn btn-default ok-btn-padding" data-dismiss="modal">Cancel</button>
@@ -55,3 +66,4 @@
     </div>
  </div>
 </div>
+
