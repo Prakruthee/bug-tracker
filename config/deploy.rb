@@ -1,5 +1,5 @@
 set :application, 'BugTracker'
-set :repo_url, 'https://github.com/Prakruthee/bug-tracker.git'
+set :repo_url, 'https://github.com/Prakruthee/bug-tracker'
 # set :scm, :git
 # ask :branch, proc { `git rev-parse --abbrev-ref HEAD`.chomp }
 
