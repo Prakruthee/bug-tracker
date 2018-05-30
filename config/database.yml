@@ -1,13 +1,3 @@
-it:
-  adapter: postgresql
-  encoding: unicode
-  database: bugtrackers_it
-  pool: 10
-  username: postgres
-  password: password
-  host: localhost
-  port: 5432
-
 development:
   adapter: postgresql
   encoding: unicode
@@ -15,17 +5,17 @@ development:
   database: bug_trackers_development
   pool: 5
   username: postgres
-  password: prakruthi
+  password: qwinix
   host: localhost
   port: 5432
 
-test:
+it:
   adapter: postgresql
   encoding: unicode
   reconnect: false
-  database: bug_trackers_test
+  database: bug_trackers_development
   pool: 5
   username: postgres
-  password: prakruthi
+  password: qwinix
   host: localhost
   port: 5432
