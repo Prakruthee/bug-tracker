@@ -27,32 +27,20 @@ gem 'sdoc', '~> 0.4.0',          group: :doc
 gem 'spring',        group: :development
 
 # Use ActiveModel has_secure_password
-gem 'bcrypt', '~> 3.1.7'
 
-gem 'rb-readline', '~> 0.5.2'
-
- gem 'rails_12factor', group: :production
-# Use unicorn as the app server
-# gem 'unicorn'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
 # Use debugger
 # gem 'debugger', group: [:development, :test]
-
+gem 'bcrypt'
+gem 'capistrano', '~> 3.5' 
+gem 'capistrano-bundler' 
+gem 'capistrano-rails' 
+gem 'capistrano-rbenv', '~> 2.0', '>= 2.0.4'
+# gem install capistrano
+# /
 group :development, :test do
-  gem 'rspec-rails', '~> 3.0'
-  gem 'factory_girl_rails', '~> 4.5.0'
-  gem 'shoulda', '~> 3.5.0'
-  gem "awesome_print"
-  gem 'pry'
-  gem 'pry-doc'
-  gem 'pry-rails'
 end
 
-gem 'omniauth'
-gem 'omniauth-facebook'
-gem 'kaminari'
-gem 'capistrano', '~> 3.3.0'
-gem 'carrierwave'
