@@ -1,7 +1,12 @@
+
 # set :application, 'BugTracker'
 # set :repo_url, 'https://github.com/Prakruthee/bug-tracker.git'
 # set :scm, :git
 # # ask :branch, proc { `git rev-parse --abbrev-ref HEAD`.chomp }
+set :application, 'BugTracker'
+set :repo_url, 'https://github.com/Prakruthee/bug-tracker'
+# set :scm, :git
+# ask :branch, proc { `git rev-parse --abbrev-ref HEAD`.chomp }
 
 # set :format, :pretty
 
@@ -10,8 +15,7 @@
 # set :rbenv_ruby, '2.0.0-p247'
 # #set :rbenv_prefix, "RBENV_ROOT=#{fetch(:rbenv_path)} RBENV_VERSION=#{fetch(:rbenv_ruby)} #{fetch(:rbenv_path)}/bin/rbenv exec"
 # #set :rbenv_map_bins, %w{rake gem bundle ruby rails}
-set :application, "bug-tracker"
-set :repo_url, "https://github.com/Prakruthee/bug-tracker"
+
 # set :rbenv_ruby, '2.3.1'
 
 

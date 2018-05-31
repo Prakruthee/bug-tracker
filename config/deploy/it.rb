@@ -15,6 +15,7 @@ role :web, %w{qwinix@192.168.2.106}
 role :db, %w{qwinix@192.168.2.106}
 server '192.168.2.106', roles: %w{:web, :app, :db}, user: 'qwinix'
 
+
 set :ssh_options, {
    #verbose: :debug,
    keys: %w(~/.ssh/id_rsa),

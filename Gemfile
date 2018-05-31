@@ -29,17 +29,22 @@ gem 'spring',        group: :development
 
 
 # Use Capistrano for deployment
-# gem 'capistrano-rails', group: :development
+gem 'capistrano-rails', group: :development
+gem 'capistrano', '~> 3.3.0'
 
 # Use debugger
 # gem 'debugger', group: [:development, :test]
-gem 'bcrypt'
-gem 'capistrano', '~> 3.5' 
-gem 'capistrano-bundler' 
-gem 'capistrano-rails' 
-gem 'capistrano-rbenv', '~> 2.0', '>= 2.0.4'
-# gem install capistrano
-# /
+# gem 'bcrypt'
+# gem 'capistrano', '~> 3.5' 
+# gem 'capistrano-bundler' 
+# gem 'capistrano-rails' 
+# gem 'capistrano-rbenv', '~> 2.0', '>= 2.0.4'
+# # gem install capistrano
+# # /
+# group :development, :test do
+# end
+
+# =======
+
 group :development, :test do
 end
-

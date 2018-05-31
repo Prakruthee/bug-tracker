@@ -25,7 +25,9 @@ class IssuesController < ApplicationController
 
 
   def index
-    relation = Issue.where("")
+
+    relation = Issue.all
+    # @issues = relation.order("updated_at desc").page(params[:page]).per(4)
     # @issue = @issues.first
   end
 
