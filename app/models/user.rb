@@ -23,7 +23,7 @@ class User < ActiveRecord::Base
             :length => {:minimum => 6},
             :unless => proc{|u| u.provider.present?}
 
-  mount_uploader :image, ImageUploader
+  # mount_uploader :image, ImageUploader
 
   def self.authenticate(username, password)
     user = find_by_username(username)

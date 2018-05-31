@@ -26,8 +26,7 @@ class IssuesController < ApplicationController
 
   def index
     relation = Issue.where("")
-    @issues = relation.order("updated_at desc").page(params[:page]).per(4)
-    @issue = @issues.first
+    # @issue = @issues.first
   end
 
   def show
