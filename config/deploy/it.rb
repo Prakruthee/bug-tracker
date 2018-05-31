@@ -13,7 +13,7 @@ set :log_level, :debug
 role :app, %w{qwinix@192.168.2.106}
 role :web, %w{qwinix@192.168.2.106}
 role :db, %w{qwinix@192.168.2.106}
-server '192.168.2.130', roles: %w{:web, :app, :db}, user: 'qwinix'
+server '192.168.2.106', roles: %w{:web, :app, :db}, user: 'qwinix'
 
 set :ssh_options, {
    #verbose: :debug,
