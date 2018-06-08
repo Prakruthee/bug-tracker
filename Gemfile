@@ -30,7 +30,9 @@ gem 'spring',        group: :development
 
 
 # Use Capistrano for deployment
-gem 'capistrano-rails', group: :development
+gem 'capistrano-rails'
+gem 'capistrano-bundler' 
+gem 'capistrano-rbenv', '~> 2.0', '>= 2.0.4'
 gem 'capistrano', '~> 3.3.0'
 
 # Use debugger
