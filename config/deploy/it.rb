@@ -1,5 +1,5 @@
 set :stage, :it
-set :branch, :demo_deployment
+set :branch, :harsha
 set :rails_env, :it
 set :deploy_to, '/u01/apps/qwinix/bug_tracker'
 set :log_level, :debug
