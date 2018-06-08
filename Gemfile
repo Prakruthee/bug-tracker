@@ -8,7 +8,6 @@ gem 'pg', '~> 0.18.1'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.3'
 # Use Uglifier as compressor for JavaScript assets
-gem 'uglifier', '>= 1.3.0'
 # Use CoffeeScript for .js.coffee assets and views
 gem 'coffee-rails', '~> 4.0.0'
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
@@ -30,8 +29,10 @@ gem 'spring',        group: :development
 
 
 # Use Capistrano for deployment
-gem 'capistrano-rails', group: :development
-gem 'capistrano', '~> 3.3.0'
+gem 'capistrano', '~> 3.3.0' 
+ gem 'capistrano-bundler' 
+ gem 'capistrano-rails' 
+ gem 'capistrano-rbenv', '~> 2.0', '>= 2.0.4'
 
 # Use debugger
 # gem 'debugger', group: [:development, :test]
