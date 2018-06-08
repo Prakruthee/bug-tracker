@@ -23,21 +23,24 @@ gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0',          group: :doc
 
 # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
-gem 'spring',        group: :development
+gem 'spring'
 
 # Use ActiveModel has_secure_password
-
+gem 'capistrano', '~> 3.5' 
+ gem 'capistrano-bundler' 
+ gem 'capistrano-rails' 
+ gem 'capistrano-rbenv', '~> 2.0', '>= 2.0.4'
 
 # Use Capistrano for deployment
-gem 'capistrano-rails', group: :development
-gem 'capistrano', '~> 3.3.0'
+# gem 'capistrano-rails'
+# gem 'capistrano', '~> 3.3.0'
 
 # Use debugger
 # gem 'debugger', group: [:development, :test]
-# gem 'bcrypt'
+gem 'bcrypt'
 # gem 'capistrano', '~> 3.5' 
 # gem 'capistrano-bundler' 
-# gem 'capistrano-rails' 
+# # gem 'capistrano-rails' 
 # gem 'capistrano-rbenv', '~> 2.0', '>= 2.0.4'
 # # gem install capistrano
 # # /
