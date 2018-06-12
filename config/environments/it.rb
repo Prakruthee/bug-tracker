@@ -23,7 +23,7 @@ BugTracker::Application.configure do
   config.serve_static_assets = true
 
   # Compress JavaScripts and CSS.
-  gem 'uglifier'
+  
   config.assets.js_compressor = :uglifier
   # config.assets.css_compressor = :sass
 
