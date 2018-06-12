@@ -1,4 +1,4 @@
-
+	
 # set :application, 'BugTracker'
 # set :repo_url, 'https://github.com/Prakruthee/bug-tracker.git'
 # set :scm, :git
