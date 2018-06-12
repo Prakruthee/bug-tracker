@@ -19,3 +19,14 @@ it:
   password: qwinix
   host: localhost
   port: 5432
+
+production:
+  adapter: postgresql
+  encoding: unicode
+  reconnect: false
+  database: bug_trackers_development
+  pool: 5
+  username: postgres
+  password: qwinix
+  host: localhost
+  port: 5432
