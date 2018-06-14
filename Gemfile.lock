@@ -52,6 +52,7 @@ GEM
       mime-types (>= 1.16)
     concurrent-ruby (1.0.5)
     erubis (2.7.0)
+    execjs (2.7.0)
     hike (1.2.3)
     i18n (0.9.5)
       concurrent-ruby (~> 1.0)
@@ -124,6 +125,8 @@ GEM
     turbolinks-source (5.1.0)
     tzinfo (1.2.5)
       thread_safe (~> 0.1)
+    uglifier (4.1.11)
+      execjs (>= 0.3.0, < 3)
 
 PLATFORMS
   ruby
@@ -143,6 +146,7 @@ DEPENDENCIES
   sdoc (~> 0.4.0)
   spring
   turbolinks
+  uglifier
 
 BUNDLED WITH
    1.16.2
