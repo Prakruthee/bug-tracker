@@ -1,21 +1,66 @@
+# development:
+#   adapter: postgresql
+#   encoding: unicode
+#   reconnect: false
+#   database: 
+#   pool: 5
+#   username: postgres
+#   password: qwinix
+#   host: localhost
+#   port: 5432
+
+# productionss:
+#   adapter: postgresql
+#   encoding: unicode
+#   reconnect: false
+#   database: bug_trackers_development
+#   pool: 5
+#   username: postgres
+#   password: qwinix
+#   host: localhost
+#   port: 5432
+
+# it:
+#   adapter: postgresql
+#   encoding: unicode
+#   port: 5432
+#   reconnect: false
+#   username: postgres
+#   password: qwinix
+#   database: event_scheduler
+#   pool: 5
+#   host: localhost
+
 development:
   adapter: postgresql
   encoding: unicode
+  port: 5432
   reconnect: false
-  database: bug_trackers_development
-  pool: 5
   username: postgres
   password: qwinix
+  database: bug_tracker
+  pool: 5
   host: localhost
+
+
+production:
+  adapter: postgresql
+  encoding: unicode
   port: 5432
+  reconnect: false
+  username: postgres
+  password: qwinix
+  database: bug_tracker
+  pool: 5
+  host: localhost
 
 it:
   adapter: postgresql
   encoding: unicode
+  port: 5432
   reconnect: false
-  database: bug_trackers_development
-  pool: 5
   username: postgres
   password: qwinix
+  database: bug_tracker
+  pool: 5
   host: localhost
-  port: 5432
