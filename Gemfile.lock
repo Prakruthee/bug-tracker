@@ -108,7 +108,7 @@ GEM
     net-ssh (5.0.1)
     nokogiri (1.8.2)
       mini_portile2 (~> 2.3.0)
-    pg (0.21.0)
+    pg (1.0.0)
     pry (0.11.3)
       coderay (~> 1.1.0)
       method_source (~> 0.9.0)
@@ -214,7 +214,7 @@ DEPENDENCIES
   coffee-rails (~> 4.1.0)
   jbuilder (~> 2.0)
   jquery-rails
-  pg (~> 0.20)
+  pg
   pry
   puma
   rails (= 4.2.7.1)
