@@ -1,6 +1,6 @@
 set :application, "BugTracker"
 set :repo_url, "https://github.com/Prakruthee/bug-tracker"
-set :rbenv_ruby, '2.3.1'
+set :rbenv_ruby, '2.5.0'
 # set :scm, :git
 # ask :branch, proc { `git rev-parse --abbrev-ref HEAD`.chomp }
 
