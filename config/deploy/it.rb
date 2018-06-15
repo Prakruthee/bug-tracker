@@ -10,10 +10,10 @@ set :deploy_to, '/u01/apps/qwinix/bug_tracker'
 # definition into the server list. The second argument
 # something that quacks like a hash can be used to set
 # extended properties on the server.
-role :app, %w{harsha@13.127.30.184}
-role :web, %w{harsha@13.127.30.184}
-role :db, %w{harsha@13.127.30.184}
-server '13.127.30.184', roles: %w{:web, :app, :db}, user: 'harsha'
+role :app, %w{harsha@13.127.254.140}
+role :web, %w{harsha@13.127.254.140}
+role :db, %w{harsha@13.127.254.140}
+server '13.127.254.140', roles: %w{:web, :app, :db}, user: 'harsha'
 
 set :ssh_options, {
    #verbose: :debug,
